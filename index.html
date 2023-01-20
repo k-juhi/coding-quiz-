@@ -10,38 +10,19 @@
   </head>
 
   <body>
-    <div class="scores"><a href="highscores.html">View Highscores</a></div>
-
-    <div class="timer">Time: <span id="time">0</span></div>
-
-    <div class="wrapper">
-      <div id="start-screen" class="start">
-        <h1>Coding Quiz Challenge</h1>
-        <p>
-          Try to answer the following code-related questions within the time
-          limit. Keep in mind that incorrect answers will penalize your
-          score/time by ten seconds!
-        </p>
-        <button id="start">Start Quiz</button>
-      </div>
-
-      <div id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
-      </div>
-
-      <div id="end-screen" class="hide">
-        <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
-          Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
-        </p>
-      </div>
-
-      <div id="feedback" class="feedback hide"></div>
+    <div id="time-left">60</div>
+    <button onclick="startTimer()">Start Quiz</button>
+    <button onclick="viewHighscores()">View Highscores</button>
+    
+    <div id="question"></div>
+    <div id="options-container">
+      <button id="option0" onclick="checkAnswer(0)"></button>
+      <button id="option1" onclick="checkAnswer(1)"></button>
+      <button id="option2" onclick="checkAnswer(2)"></button>
+      <button id="option3" onclick="checkAnswer(3)"></button>
     </div>
-
+    
+    </div>
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/logic.js"></script>
   </body>
